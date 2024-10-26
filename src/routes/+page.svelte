@@ -155,6 +155,7 @@
             udgamTitle.style.borderRight = 'none';
         }, 3000); // 3000ms = 3s, the duration of the writeText animation
     }, 500);
+    
 
     // Add sliding highlight effect to navbar links
     const navLinksHighlight = document.querySelectorAll('.nav-links a');
