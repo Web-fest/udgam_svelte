@@ -2,6 +2,7 @@
     import "../app.css";
     import Hero from "../components/Hero.svelte";
     import EventCard from "../components/EventCard.svelte";
+    import Footer from "../components/Footer.svelte";
 
 </script>
 <body>
@@ -9,45 +10,9 @@
         <Hero />
         <EventCard />
         <!-- Add this new section -->
-        <section id="past-glimpses">
-            <h2>Past Glimpses</h2>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url('img1.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img2.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img3.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img4.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img5.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img6.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img7.jpg')"></div>
-                    <div class="swiper-slide" style="background-image: url('img8.jpg')"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="schedule">
-            <h2>Event Schedule</h2>
-            <div class="schedule-container">
-                <div class="schedule-day">
-                    <h3>Day 1</h3>
-                    <ul>
-                        <li><span>10:00 AM</span> Opening Ceremony</li>
-                        <li><span>2:00 PM</span> Tech Expo</li>
-                        <li><span>7:00 PM</span> Music Night</li>
-                    </ul>
-                </div>
-                <div class="schedule-day">
-                    <h3>Day 2</h3>
-                    <ul>
-                        <li><span>11:00 AM</span> Dance Competition</li>
-                        <li><span>3:00 PM</span> Fashion Show</li>
-                        <li><span>8:00 PM</span> Stand-up Comedy</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+       
     </main>
-
+    <Footer />
     
     <script>
     

@@ -1,5 +1,6 @@
 <script>
    import "../register/register.css";
+   import Footer from "../../components/Footer.svelte";
    import { redirect } from "@sveltejs/kit";
 
    let email = undefined;
@@ -290,3 +291,4 @@
       toggleSpecialIDField();
    </script>
 </body>
+<Footer />
