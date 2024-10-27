@@ -1,19 +1,12 @@
 <script>
-    import '../app.css';
+    import "../app.css";
+    import Hero from "../components/Hero.svelte";
 
 </script>
 <body>
     <main>
-
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 id="udgam-title">UDGAM'2k24</h1>
-                <p id="rise-text"><span>RISE THROUGH THE CULTURE</span></p>
-                <div class="cta-buttons">
-                    <a href="../frontend_udgam/login.html" class="cta-button primary">Register Now</a>
-                </div>
-        </section>
-
+        <Hero />
+        
         <section id="events">
             <h2>Featured Events</h2>
             <div class="event-grid">
@@ -112,78 +105,8 @@
         </div>
     </footer>
     
-    <script>document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-
-    burger.addEventListener('click', () => {
-        // Toggle Nav
-        nav.classList.toggle('nav-active');
-
-        // Animate Links
-        navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = '';
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-            }
-        });
-
-        // Burger Animation
-        burger.classList.toggle('toggle');
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Writing effect for UDGAM'2024
-    const udgamTitle = document.getElementById('udgam-title');
-    udgamTitle.style.width = '0';
-    setTimeout(() => {
-        udgamTitle.style.width = '100%';
-        // Remove the border (cursor) after the animation is complete
-        setTimeout(() => {
-            udgamTitle.style.borderRight = 'none';
-        }, 3000); // 3000ms = 3s, the duration of the writeText animation
-    }, 500);
+    <script>
     
-
-    // Add sliding highlight effect to navbar links
-    const navLinksHighlight = document.querySelectorAll('.nav-links a');
-    const highlight = document.createElement('span');
-    highlight.classList.add('highlight');
-    document.querySelector('.nav-links').appendChild(highlight);
-
-    function moveHighlight(e) {
-        const linkWidth = e.target.getBoundingClientRect().width;
-        const linkLeft = e.target.getBoundingClientRect().left;
-        const containerLeft = e.target.closest('.nav-links').getBoundingClientRect().left;
-        const highlightPosition = linkLeft - containerLeft;
-
-        highlight.style.width = `${linkWidth}px`;
-        highlight.style.transform = `translateX(${highlightPosition}px)`;
-    }
-
-    function removeHighlight() {
-        highlight.style.width = '0';
-    }
-
-    navLinksHighlight.forEach((link) => {
-        link.addEventListener('mouseenter', moveHighlight);
-        link.addEventListener('focus', moveHighlight);
-        link.addEventListener('mouseleave', removeHighlight);
-        link.addEventListener('blur', removeHighlight);
-    });
-
     // Initialize Swiper
     var swiper = new Swiper(".swiper", {
         effect: "coverflow",

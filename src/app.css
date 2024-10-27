@@ -8,7 +8,7 @@
 :root {
     --primary-color: #ff6b6b;
     --secondary-color: #4ecdc4;
-    --background-color: #4A1C40;
+    --background-color: #1a1a2e;
     --text-color: #ffffff;
 }
 
@@ -31,8 +31,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(87, 49, 78, 0.85); /* Adjust the alpha value for desired transparency */
-    backdrop-filter: blur(10px);
+    background-color: rgba(26, 26, 46, 0.7); /* Adjust the alpha value for desired transparency */
+    backdrop-filter: blur(5px);
 }
 
 nav {
@@ -72,6 +72,7 @@ nav {
 }
 
 .burger {
+    position: relative;
     display: none;
     cursor: pointer;
 }
@@ -95,7 +96,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url('assets/tranquil-scene-sunset-forest-mysterious-beauty-nature-generated-by-artificial-intelligence.jpg');
+    background-image: url('./assets/tranquil-scene-sunset-forest-mysterious-beauty-nature-generated-by-artificial-intelligence.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -134,14 +135,12 @@ main {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    font-family: 'Josefin Sans';
 }
 
 .cta-button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
     font-weight: 600;
-    font-family: 'poppins';
     text-decoration: none;
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -526,8 +525,6 @@ footer {
 #rise-text {
     overflow: hidden;
     height: 1.5em;
-    font-family: "Cinzel";
-    font-optical-sizing: auto;
 }
 
 #rise-text span {
