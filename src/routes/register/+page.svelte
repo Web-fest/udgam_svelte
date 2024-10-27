@@ -39,10 +39,12 @@
       );
       if (!response.status === 201) {
          redirect(302, "/");
+         return;
       }
-      console.log("signed in");
-
-      return await response.json();
+      else{
+         redirect(301,"/");
+         return;
+      }
    };
 </script>
 
@@ -204,7 +206,7 @@
          >
 
          <p class="login__register">
-            Already have an account? <a href="./login.html">Login</a>
+            Already have an account? <a href="/login">Login</a>
          </p>
       </form>
    </div>
