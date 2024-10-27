@@ -16,8 +16,22 @@ export const actions = {
 		});
 
 		const cookie = response.headers.getSetCookie();
-		cookies.set('authToken', cookie[0].replace("authToken=", ""), { path: '/' });
+		const finalCookie = cookie[0].split(" ")[0].replace("authToken=", "");
+		cookies.set('authToken', finalCookie, { path: '/' });
 
 		return { success: true };
 	}
+}
+
+export async function load({ params, cookies, fetch }) {
+	const token = cookies.get('authToken');
+	const meInfo = await fetch("http://localhost:8080/api/v1/auth/me", {
+		headers: {
+			"Content-Type": "application/json",
+			"Authorization": token,
+		},
+	});
+
+	const data = await meInfo.json();
+	return { data };
 }

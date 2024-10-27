@@ -1,6 +1,5 @@
 <script>
    import "../login/login.css";
-   import { redirect } from "@sveltejs/kit";
 
    let email = undefined;
    let password = undefined;
