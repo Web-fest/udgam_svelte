@@ -22,7 +22,7 @@
                 <div class="highlight"></div>
             </li>
             <li>
-                <a href="#sponsors">Past Glimpses</a>
+                <a href="/past">Past Glimpses</a>
                 <div class="highlight"></div>
             </li>
             <li><a href="/team">Core Team</a>

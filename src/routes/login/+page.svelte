@@ -1,5 +1,18 @@
 <script>
     import "../login/login.css";
+    import { redirect } from "@sveltejs/kit";
+
+const onloginnormal =async(email,password) =>{
+    const response = await fetch('http://localhost:8080/api/v1/auth/login',{method:'POST',body:{
+        'email':email,
+        'password':password,
+    }})
+    if(!response.status===200){
+        redirect(302,'/')       
+    }
+    
+    return await response.json()
+}
 </script>
 <body>
     <div class="login">

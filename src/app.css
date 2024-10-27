@@ -501,11 +501,13 @@ footer {
     animation: 
         writeText 3s steps(10, end),
         blinkCursor 0.75s step-end 8;
+        
 }
 
 @keyframes blinkCursor {
     from, to { border-color: transparent }
     50% { border-color: var(--primary-color); }
+    
 }
 
 .highlight {
