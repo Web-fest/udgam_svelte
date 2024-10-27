@@ -48,16 +48,16 @@
    };
 </script>
 
-<body>
+<body style="font-family: 'Cinzel';">
    <div class="login">
       <img
-         src="./images/fantasy-endless-hole-landscape.jpg"
+         src="/assets/register.jpg"
          alt=""
          class="login__img"
       />
 
       <form action="" class="container">
-         <h1 class="login__title">Sign Up</h1>
+         <h1 class="login__title"><span style="font-family: 'Cinzel';">Sign Up</span></h1>
 
          <div class="login__content">
             <div class="login__box">
@@ -195,6 +195,7 @@
          <button
             type="submit"
             class="login__button"
+            style="color:black; font-family:'Cinzel';"
             on:click={onregister(
                name,
                rollno,

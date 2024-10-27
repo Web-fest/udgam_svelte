@@ -21,9 +21,9 @@
    };
 </script>
 
-<body>
+<body style="font-family: 'Cinzel';">
    <div class="login">
-      <img src="./images/login-bg.png" alt="" class="login__img" />
+      <img src="/assets/login-bg.png" alt="" class="login__img" />
 
       <form action="" class="container">
          <h1 class="login__title">Login</h1>
@@ -103,6 +103,7 @@
          <button
             type="submit"
             class="login__button"
+            style="color:black; font-family: 'Cinzel'; font-size:medium;"
             on:click={onloginnormal(email, password)}>Login</button
          >
 
@@ -113,21 +114,22 @@
    </div>
    <script>
       // Get the password input and eye icon elements
-      const passwordInput = document.getElementById("login-pass");
-      const eyeIcon = document.getElementById("login-eye");
-
-      // Add click event listener to the eye icon
-      eyeIcon.addEventListener("click", function () {
-         // Toggle password visibility
-         if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            eyeIcon.classList.remove("ri-eye-off-line");
-            eyeIcon.classList.add("ri-eye-line");
-         } else {
-            passwordInput.type = "password";
-            eyeIcon.classList.remove("ri-eye-line");
-            eyeIcon.classList.add("ri-eye-off-line");
-         }
-      });
+       // Get the password input and eye icon elements
+       const passwordInput = document.getElementById('login-pass');
+         const eyeIcon = document.getElementById('login-eye');
+   
+         // Add click event listener to the eye icon
+         eyeIcon.addEventListener('click', function() {
+            // Toggle password visibility
+            if (passwordInput.type === 'password') {
+               passwordInput.type = 'text';
+               eyeIcon.classList.remove('ri-eye-off-line');
+               eyeIcon.classList.add('ri-eye-line');
+            } else {
+               passwordInput.type = 'password';
+               eyeIcon.classList.remove('ri-eye-line');
+               eyeIcon.classList.add('ri-eye-off-line');
+            }
+         });
    </script>
 </body>
