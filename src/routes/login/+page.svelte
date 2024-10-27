@@ -4,28 +4,13 @@
 
    let email = undefined;
    let password = undefined;
-   const onloginnormal = async (email, password) => {
-      const response = await fetch("http://localhost:8080/api/v1/auth/login", {
-         method: "POST",
-         body: JSON.stringify({
-            email: email,
-            password: password,
-         }),
-         headers: {
-            "Content-Type": "application/json",
-         },
-      });
-      if (!response.status === 200) {
-         redirect(302, "/");
-      }
-   };
 </script>
 
 <body style="font-family: 'Cinzel';">
    <div class="login">
       <img src="/assets/login-bg.png" alt="" class="login__img" />
 
-      <form action="" class="container">
+      <form action="/" method="post" class="container">
          <h1 class="login__title">Login</h1>
 
          <div class="login__content">
@@ -35,6 +20,7 @@
                <div class="login__box-input">
                   <input
                      type="email"
+                     name="email"
                      required
                      class="login__input"
                      id="login-email"
@@ -51,6 +37,7 @@
                <div class="login__box-input">
                   <input
                      type="password"
+                     name="password"
                      required
                      class="login__input"
                      id="login-pass"
@@ -100,12 +87,7 @@
             <a href="#" class="login__forgot">Forgot Password?</a>
          </div>
 
-         <button
-            type="submit"
-            class="login__button"
-            style="color:black; font-family: 'Cinzel'; font-size:medium;"
-            on:click={onloginnormal(email, password)}>Login</button
-         >
+         <button type="submit" class="login__button">Login</button>
 
          <p class="login__register">
             Don't have an account? <a href="/register">Sign up</a>
@@ -114,22 +96,22 @@
    </div>
    <script>
       // Get the password input and eye icon elements
-       // Get the password input and eye icon elements
-       const passwordInput = document.getElementById('login-pass');
-         const eyeIcon = document.getElementById('login-eye');
-   
-         // Add click event listener to the eye icon
-         eyeIcon.addEventListener('click', function() {
-            // Toggle password visibility
-            if (passwordInput.type === 'password') {
-               passwordInput.type = 'text';
-               eyeIcon.classList.remove('ri-eye-off-line');
-               eyeIcon.classList.add('ri-eye-line');
-            } else {
-               passwordInput.type = 'password';
-               eyeIcon.classList.remove('ri-eye-line');
-               eyeIcon.classList.add('ri-eye-off-line');
-            }
-         });
+      // Get the password input and eye icon elements
+      const passwordInput = document.getElementById("login-pass");
+      const eyeIcon = document.getElementById("login-eye");
+
+      // Add click event listener to the eye icon
+      eyeIcon.addEventListener("click", function () {
+         // Toggle password visibility
+         if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eyeIcon.classList.remove("ri-eye-off-line");
+            eyeIcon.classList.add("ri-eye-line");
+         } else {
+            passwordInput.type = "password";
+            eyeIcon.classList.remove("ri-eye-line");
+            eyeIcon.classList.add("ri-eye-off-line");
+         }
+      });
    </script>
 </body>
