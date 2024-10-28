@@ -1,11 +1,23 @@
 <script>
     import "../app.css";
+    import { userLoginStore } from "../lib/userLoginStore";
+
+    let name;
+
+    userLoginStore.subscribe((val) => {
+        console.log(val);
+        name = val;
+    });
 </script>
+
 <header>
-    <nav>   
+    <nav>
         <div class="logo">
             <a href="/">
-            <img src="../frontend_udgam/images/LOGO FINAL.png" alt="College Fest Logo">
+                <img
+                    src="../frontend_udgam/images/LOGO FINAL.png"
+                    alt="College Fest Logo"
+                />
             </a>
         </div>
         <ul class="nav-links">
@@ -22,13 +34,15 @@
                 <div class="highlight"></div>
             </li>
             <li>
-                <a href="#sponsors">Past Glimpses</a>
+                <a href="/past">Past Glimpses</a>
                 <div class="highlight"></div>
             </li>
-            <li><a href="/team">Core Team</a>
+            <li>
+                <a href="/team">Core Team</a>
                 <div class="highlight"></div>
             </li>
-            <li><a href="../frontend_udgam/contact.html">Contact Us</a>
+            <li>
+                <a href="../frontend_udgam/contact.html">Contact Us</a>
                 <div class="highlight"></div>
             </li>
         </ul>
@@ -37,5 +51,10 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
+        {#if $userLoginStore === undefined}
+            <a href="/login"><div>Login</div></a>
+        {:else}
+            <div>{name}</div>
+        {/if}
     </nav>
 </header>

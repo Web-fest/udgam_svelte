@@ -98,7 +98,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url('./assets/tranquil-scene-sunset-forest-mysterious-beauty-nature-generated-by-artificial-intelligence.jpg');
+    background-image: url('/assets/tranquil-scene-sunset-forest-mysterious-beauty-nature-generated-by-artificial-intelligence.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -501,11 +501,13 @@ footer {
     animation: 
         writeText 3s steps(10, end),
         blinkCursor 0.75s step-end 8;
+        
 }
 
 @keyframes blinkCursor {
     from, to { border-color: transparent }
     50% { border-color: var(--primary-color); }
+    
 }
 
 .highlight {
