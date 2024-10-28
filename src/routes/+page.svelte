@@ -6,7 +6,9 @@
     import { userLoginStore } from "../lib/userLoginStore";
 
     export let data;
-    userLoginStore.set(data.data.name);
+    if (data.data !== undefined) {
+        userLoginStore.set(data.data.name);
+    }
 </script>
 
 <body>
