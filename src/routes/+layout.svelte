@@ -1,9 +1,22 @@
 <script>
     import "../app.css";
     import Navbar from "../components/Navbar.svelte";
+    let Footer;
+
+    import { onMount } from 'svelte';
+
+    onMount(async () => {
+        Footer = (await import('../components/Footer.svelte')).default;
+    });
 </script>
+
+
+
 <main>
-    <Navbar/>
+    <Navbar />
+    <slot />
 </main>
 
-<slot />
+{#if Footer}
+    <svelte:component this={Footer} />
+{/if}

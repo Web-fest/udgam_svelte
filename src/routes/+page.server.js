@@ -1,3 +1,5 @@
+import { redirect } from '@sveltejs/kit';
+
 export const actions = {
 	default: async ({ fetch, cookies, request }) => {
 		const data = await request.formData();
@@ -25,12 +27,20 @@ export const actions = {
 
 export async function load({ params, cookies, fetch }) {
 	const token = cookies.get('authToken');
+	if (token === undefined) {
+		return;
+	}
 	const meInfo = await fetch("http://localhost:8080/api/v1/auth/me", {
 		headers: {
 			"Content-Type": "application/json",
 			"Authorization": token,
 		},
 	});
+
+	if (meInfo.status == 401) {
+		cookies.delete('authToken', { path: '/' });
+		redirect(301, "/");
+	}
 
 	const data = await meInfo.json();
 	return { data };
