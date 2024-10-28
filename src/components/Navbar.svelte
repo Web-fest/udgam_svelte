@@ -15,7 +15,7 @@
         <div class="logo">
             <a href="/">
                 <img
-                    src="../frontend_udgam/images/LOGO FINAL.png"
+                    src=""
                     alt="College Fest Logo"
                 />
             </a>
@@ -45,16 +45,19 @@
                 <a href="../frontend_udgam/contact.html">Contact Us</a>
                 <div class="highlight"></div>
             </li>
+            <li>
+                {#if $userLoginStore === undefined}
+            <a href="/login"><div>Login</div></a>
+            {:else}
+            <div>{name}</div>
+            {/if}
+            </li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
-        {#if $userLoginStore === undefined}
-            <a href="/login"><div>Login</div></a>
-        {:else}
-            <div>{name}</div>
-        {/if}
+        
     </nav>
 </header>
