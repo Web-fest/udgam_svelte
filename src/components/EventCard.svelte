@@ -5,56 +5,72 @@
     export let link = '#';
     let imageLoaded = false;
     const placeholderImage = 'https://via.placeholder.com/300'; // Use a valid placeholder URL
-  
-    console.log('EventCard props:', { title, image, description, link }); // Debugging log
-  </script>
-  
-  <div class="event-card">
-    <div class="event-card-inner">
-      <div class="event-card-front">
-        <!-- Use IntersectionObserver to lazy-load the image -->
-        <img
-          src={imageLoaded ? image : placeholderImage}
-          alt={title}
-          loading="lazy"
-          class:image-loaded={imageLoaded}
-          on:load={() => (imageLoaded = true)}
-          on:error={(e) => (e.target.src = placeholderImage)}
-        />
-        <h3>{title}</h3>
-      </div>
-      <div class="event-card-back">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <a href={link} class="event-register-btn">Register Now</a>
-      </div>
+</script>
+
+<div class="event-tile">
+    <div class="event-tile-inner">
+        <!-- Front Side -->
+        <div class="event-card-front">
+            <div class="event-image-container">
+                <img
+                    src={imageLoaded ? image : placeholderImage}
+                    alt={title}
+                    loading="lazy"
+                    class:image-loaded={imageLoaded}
+                    on:load={() => (imageLoaded = true)}
+                    on:error={(e) => (e.target.src = placeholderImage)}
+                />
+            </div>
+            <div class="event-tile-title">
+                <h3>{title}</h3>
+            </div>
+        </div>
+
+        <!-- Back Side -->
+        <div class="event-card-back">
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <a href={link} class="event-register-btn">Register Now</a>
+        </div>
     </div>
-  </div>
-  
-  <style>
-    .event-card {
-        background-color: transparent;
+</div>
+
+<style>
+    /* Event Tile */
+    .event-tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        height: 300px;
+        height: 600px;
+        border: 3px solid #b8916d; /* Fantasy-style border */
+        border-radius: 12px;
+        padding: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         perspective: 1000px;
-        box-shadow: 0 4px 8px rgba(135, 125, 125, 0.1);
-        border-radius: 10px;
-        transition: box-shadow 0.3s ease, transform 0.6s;
+        transition: transform 0.6s, box-shadow 0.3s ease;
     }
-  
-    .event-card-inner {
+
+    .event-tile:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        transform: translateY(-5px);
+    }
+
+    /* Flip Effect */
+    .event-tile-inner {
         position: relative;
         width: 100%;
         height: 100%;
         text-align: center;
-        transition: transform 0.6s;
         transform-style: preserve-3d;
+        transition: transform 0.6s;
     }
-  
-    .event-card:hover .event-card-inner {
+
+    .event-tile:hover .event-tile-inner {
         transform: rotateY(180deg);
     }
-  
+
+    /* Card Sides */
     .event-card-front,
     .event-card-back {
         position: absolute;
@@ -63,62 +79,91 @@
         backface-visibility: hidden;
         border-radius: 10px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
-  
+
+    /* Front Card */
     .event-card-front {
         background-color: rgba(255, 255, 255, 0.1);
     }
-  
+
+    /* Back Card */
     .event-card-back {
         background-color: var(--primary-color);
         color: var(--text-color);
         transform: rotateY(180deg);
+        padding: 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1.5rem;
     }
-  
-    .event-card img {
+
+    /* Image Styles */
+    .event-image-container {
+        flex: 1;
+        overflow: hidden;
+    }
+
+    .event-image-container img {
         width: 100%;
-        height: 80%;
+        height: 100%;
         object-fit: cover;
         transition: opacity 0.5s ease-in-out;
         opacity: 0;
     }
-  
-    .event-card img.image-loaded {
+
+    .event-image-container img.image-loaded {
         opacity: 1;
     }
-  
-    .event-card h3 {
-        font-size: 1.5rem;
-        font-family: 'Cinzel', serif; /* Event title font */
-        margin-bottom: 0.5rem;
+
+    /* Title Below the Card */
+    .event-tile-title {
+        text-align: center;
+        background-color: #1a1a2e;
+        width: 100%;
+        padding: 0.4rem 0;
+        font-family: 'Cinzel', serif;
+        font-weight: bold;
     }
-  
-    .event-card p {
-        font-size: 1rem;
+
+    .event-tile-title h3 {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0;
+    }
+
+    /* Back Card Content */
+    .event-card-back h3 {
+        font-size: 2rem;
+        font-family: 'Cinzel', serif;
+        font-weight: bold;
+        margin-bottom: 0.6rem;
+    }
+
+    .event-card-back p {
+        font-size: 1.5rem;
         margin-bottom: 1rem;
     }
-  
+
+    /* Register Button */
     .event-register-btn {
         display: inline-block;
-        padding: 0.8rem 0.4rem;
-        background-color: var(--secondary-color);
-        color: var(--background-color);
+        padding: 0.8rem 1rem;
+        background-color: #e6b700;
+        color: #fff;
         text-decoration: none;
         border-radius: 50px;
-        font-weight: 600;
-        font-size: 0.9rem;
+        font-weight: bold;
+        font-size: 1.5rem;
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         position: relative;
         overflow: hidden;
     }
-  
+
     .event-register-btn:before {
         content: '';
         position: absolute;
@@ -126,29 +171,22 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-            120deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent
-        );
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
         transition: all 0.8s ease;
     }
-  
+
     .event-register-btn:hover {
-        background-color: var(--primary-color);
-        color: var(--text-color);
+        background-color: #ffca28;
         transform: translateY(-3px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     }
-  
+
     .event-register-btn:hover:before {
         left: 100%;
     }
-  
+
     .event-register-btn:active {
         transform: translateY(-1px);
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     }
-  </style>
-  
+</style>
