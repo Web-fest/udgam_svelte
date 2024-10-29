@@ -35,14 +35,11 @@
     .event-card {
         background-color: transparent;
         width: 100%;
-        max-width: 400px; /* Set a max width to control the size */
-        height: 400px; /* Set the height for a square aspect ratio */
+        height: 300px;
         perspective: 1000px;
         box-shadow: 0 4px 8px rgba(135, 125, 125, 0.1);
         border-radius: 10px;
         transition: box-shadow 0.3s ease, transform 0.6s;
-        margin: 1rem; /* Add margin for spacing */
-        overflow: hidden; /* Ensure overflow is hidden for the card */
     }
   
     .event-card-inner {
@@ -79,12 +76,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 1.5rem;
     }
   
     .event-card img {
         width: 100%;
-        height: 80%; /* Adjust height if necessary to fit the design */
+        height: 80%;
         object-fit: cover;
         transition: opacity 0.5s ease-in-out;
         opacity: 0;
@@ -101,13 +98,13 @@
     }
   
     .event-card p {
-        font-size: 0.9rem; /* Adjusted font size for better readability */
+        font-size: 1rem;
         margin-bottom: 1rem;
     }
   
     .event-register-btn {
         display: inline-block;
-        padding: 0.6rem 0.4rem;
+        padding: 0.8rem 0.4rem;
         background-color: var(--secondary-color);
         color: var(--background-color);
         text-decoration: none;
