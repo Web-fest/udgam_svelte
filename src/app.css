@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -19,26 +20,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     height: 100%;
     margin: 0;
-  }
+}
+
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cormorant Garamond', serif; /* Main body font */
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
 }
-
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(26, 26, 46, 0.7); /* Adjust the alpha value for desired transparency */
+    background-color: rgba(26, 26, 46, 0.7);
     backdrop-filter: blur(5px);
 }
 
@@ -50,7 +52,12 @@ nav {
 }
 
 .logo img {
-    height: 70px;
+    height: 100px;
+    width: auto;
+    transition: opacity 0.5s ease;
+}
+.logo img[loading="lazy"] {
+    opacity: 0; /* Initially hide the image */
 }
 
 .nav-links {
@@ -66,7 +73,7 @@ nav {
 
 .nav-links a {
     color: var(--text-color);
-    font-family: 'almendra';
+    font-family: ' Cinzel', serif; /* Navigation font */
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -95,6 +102,7 @@ nav {
 main {
     /* Remove or comment out the padding-top */
     /* padding-top: 80px; */
+    
     flex: 1
 }
 
@@ -104,12 +112,13 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url('/assets/tranquil-scene-sunset-forest-mysterious-beauty-nature-generated-by-artificial-intelligence.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
-    padding-top: 80px; /* Add this line to create space for the navbar */
+    padding-top: 80px; /* Space for the navbar */
+    transition: background-image 0.5s ease-in-out;
 }
+
 
 /* Add this new rule to create an overlay */
 .hero::before {
@@ -131,6 +140,7 @@ main {
 
 .hero h1 {
     font-size: 4rem;
+    font-family: 'Cinzel', serif; /* Hero title font */
     margin-bottom: 1rem;
 }
 
@@ -148,6 +158,7 @@ main {
 .cta-button {
     padding: 0.8rem 2rem;
     font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     text-decoration: none;
     border-radius: 50px;
@@ -198,9 +209,11 @@ section {
 }
 
 h2 {
+    font-family: 'Cinzel', serif;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
     text-align: center;
+    margin-top: 2rem;
+    color: var(--primary-color);
 }
 
 .event-grid {
@@ -210,149 +223,6 @@ h2 {
     gap: 2rem;
 }
 
-.event-card {
-    background-color: transparent;
-    width: 100%;
-    height: 300px;
-    perspective: 1000px;
-    box-shadow: 0 4px 8px rgba(135, 125, 125, 0.1);
-    border-radius: 10px;
-    transition: box-shadow 0.3s ease, transform 0.6s;
-}
-
-.event-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.event-card:hover .event-card-inner {
-    transform: rotateY(180deg);
-}
-
-.event-card-front, .event-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.event-card-front {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.event-card-back {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem;
-}
-
-.event-card img {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-}
-
-.event-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.event-card p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-.event-register-btn {
-    display: inline-block;
-    padding: 0.8rem 0.4rem;
-    background-color: var(--secondary-color);
-    color: var(--background-color);
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.event-register-btn:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.3),
-        transparent
-    );
-    transition: all 0.8s ease;
-}
-
-.event-register-btn:hover {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.event-register-btn:hover:before {
-    left: 100%;
-}
-
-.event-register-btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.schedule-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.schedule-day {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 2rem;
-    margin: 1rem;
-    flex: 1;
-    min-width: 250px;
-}
-
-.schedule-day h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.schedule-day ul {
-    list-style: none;
-}
-
-.schedule-day li {
-    margin-bottom: 0.5rem;
-}
-
-.schedule-day span {
-    font-weight: 600;
-    color: var(--primary-color);
-}
 
 .sponsor-grid {
     display: grid;
@@ -434,6 +304,7 @@ h2 {
 }
 
 footer {
+    font-family: 'Poppins', sans-serif;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 2rem 5%;
     text-align: center;
@@ -502,6 +373,7 @@ footer {
     display: inline-block;
     overflow: hidden;
     border-right: 0.15em solid var(--primary-color);
+    font-family:  'Samarkan';
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: 0.15em;
@@ -534,6 +406,7 @@ footer {
 
 
 #rise-text {
+    font-family: 'Cinzel',serif;
     overflow: hidden;
     height: 1.5em;
 }
@@ -559,16 +432,7 @@ footer {
     }
 }
 
-/* Past Glimpses Section */
-#past-glimpses {
-    background-color: var(--background-color);
-    padding: 5rem 0;
-}
 
-#past-glimpses h2 {
-    color: var(--text-color);
-    margin-bottom: 3rem;
-}
 
 .swiper {
     width: 100%;

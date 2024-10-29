@@ -1,9 +1,10 @@
 <script>
-
     import { onMount } from "svelte";
     import { userLoginStore } from "../lib/userLoginStore";
+    import logoSrc from "$lib/assets/images/logo.webp"; // Ensure the path is correct
 
     let name;
+    let logoLoaded = false; // Flag to check if the logo is loaded
 
     userLoginStore.subscribe((val) => {
         console.log(val);
@@ -48,24 +49,52 @@
         });
     }
 
-    onMount(navbarAnimation);
+    onMount(() => {
+        navbarAnimation();
+
+        // Lazy load the logo when it comes into view
+        const logoElement = document.getElementById("navbar-logo");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    logoLoaded = true; // Set the flag to true when in view
+                    observer.unobserve(entry.target); // Stop observing
+                    console.log('Logo is now loaded'); // Debug log
+                }
+            });
+        });
+
+        observer.observe(logoElement); // Start observing the logo element
+    });
 </script>
 
 <header>
     <nav>
         <div class="logo">
             <a href="/">
-                <img src="" alt="College Fest Logo" />
+                <img
+                    id="navbar-logo"
+                    src={logoLoaded ? logoSrc : ''}
+                    alt="College Fest Logo"
+                    loading="lazy"
+                    style="opacity: {logoLoaded ? 1 : 0}; transition: opacity 0.5s ease;" 
+                />
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="#home">About us</a><div class="highlight"></div></li>
-            <li><a href="/events">Events</a><div class="highlight"></div></li>
-            <li><a href="../frontend_udgam/Sponsors.html">Our Sponsors</a><div class="highlight"></div></li>
-            <li><a href="/past">Past Glimpses</a><div class="highlight"></div></li>
-            <li><a href="/team">Core Team</a><div class="highlight"></div></li>
-            <li><a href="../frontend_udgam/contact.html">Contact Us</a><div class="highlight"></div></li>
-            <li>{#if $userLoginStore === undefined}<a href="/login"><div>Login</div></a>{:else}<div>{name}</div>{/if}</li>
+            <li><a href="#home">About us</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="../frontend_udgam/Sponsors.html">Our Sponsors</a></li>
+            <li><a href="/past">Past Glimpses</a></li>
+            <li><a href="/team">Core Team</a></li>
+            <li><a href="../frontend_udgam/contact.html">Contact Us</a></li>
+            <li>
+                {#if $userLoginStore === undefined}
+                    <a href="/login"><div>Login</div></a>
+                {:else}
+                    <div>{name}</div>
+                {/if}
+            </li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -74,3 +103,4 @@
         </div>
     </nav>
 </header>
+
