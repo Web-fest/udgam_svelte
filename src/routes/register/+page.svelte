@@ -28,7 +28,7 @@
       console.log(data);
 
       const response = await fetch(
-         "http://localhost:8081/api/v1/auth/register",
+         "http://129.154.255.30:8081/api/v1/auth/register",
          {
             method: "POST",
             body: JSON.stringify(data),

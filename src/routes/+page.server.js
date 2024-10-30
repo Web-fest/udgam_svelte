@@ -6,7 +6,7 @@ export const actions = {
 		const email = data.get('email');
 		const password = data.get('password');
 
-		const response = await fetch("http://localhost:8081/api/v1/auth/login", {
+		const response = await fetch("http://129.154.255.30:8081/api/v1/auth/login", {
 			method: "POST",
 			body: JSON.stringify({
 				email: email,
@@ -30,7 +30,7 @@ export async function load({ params, cookies, fetch }) {
 	if (token === undefined) {
 		return;
 	}
-	const meInfo = await fetch("http://localhost:8081/api/v1/auth/me", {
+	const meInfo = await fetch("http://129.154.255.30:8081/api/v1/auth/me", {
 		headers: {
 			"Content-Type": "application/json",
 			"Authorization": token,
