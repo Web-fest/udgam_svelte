@@ -23,7 +23,9 @@
         burger.addEventListener("click", () => {
             nav.classList.toggle("nav-active");
             navLinks.forEach((link, index) => {
-                link.style.animation = link.style.animation ? "" : `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                link.style.animation = link.style.animation
+                    ? ""
+                    : `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
             });
             burger.classList.toggle("toggle");
         });
@@ -31,7 +33,9 @@
         function moveHighlight(e) {
             const linkWidth = e.target.getBoundingClientRect().width;
             const linkLeft = e.target.getBoundingClientRect().left;
-            const containerLeft = e.target.closest(".nav-links").getBoundingClientRect().left;
+            const containerLeft = e.target
+                .closest(".nav-links")
+                .getBoundingClientRect().left;
             const highlightPosition = linkLeft - containerLeft;
             highlight.style.width = `${linkWidth}px`;
             highlight.style.transform = `translateX(${highlightPosition}px)`;
@@ -55,11 +59,11 @@
         // Lazy load the logo when it comes into view
         const logoElement = document.getElementById("navbar-logo");
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     logoLoaded = true; // Set the flag to true when in view
                     observer.unobserve(entry.target); // Stop observing
-                    console.log('Logo is now loaded'); // Debug log
+                    console.log("Logo is now loaded"); // Debug log
                 }
             });
         });
@@ -74,10 +78,12 @@
             <a href="/">
                 <img
                     id="navbar-logo"
-                    src={logoLoaded ? logoSrc : ''}
+                    src={logoLoaded ? logoSrc : ""}
                     alt="College Fest Logo"
                     loading="lazy"
-                    style="opacity: {logoLoaded ? 1 : 0}; transition: opacity 0.5s ease;" 
+                    style="opacity: {logoLoaded
+                        ? 1
+                        : 0}; transition: opacity 0.5s ease;"
                 />
             </a>
         </div>
@@ -88,7 +94,7 @@
             <li><a href="/past">Past Glimpses</a></li>
             <li><a href="/team">Core Team</a></li>
             <li><a href="">OUR FICs</a></li>
-            <li><a href="../frontend_udgam/contact.html">Contact Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
             <li>
                 {#if $userLoginStore === undefined}
                     <a href="/login"><div>Login</div></a>
@@ -104,4 +110,3 @@
         </div>
     </nav>
 </header>
-
