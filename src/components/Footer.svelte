@@ -6,38 +6,53 @@
 <footer
   class={`${
     small ? 'mx-auto max-w-md' : 'mx-0 w-full'
-  } bg-opacity-20 bg-blue text-center p-8`} 
+  } bg-opacity-20 bg-blue text-center p-4`} 
 >
   <!-- Logo Section -->
-  <div class="logo-container flex justify-center items-center mb-6">
+  <div class="logo-container flex justify-center items-center mb-4">
     <img
       src={logoSrc}
       alt="Logo"
-      class="h-20 w-auto object-contain" 
+      class="h-16 w-auto object-contain" 
     />
   </div>
 
   <!-- Navbar Links -->
-  <nav class="nav-links flex justify-center mb-6 space-x-8">
-    <a href="/home" class="text-white text-lg hover:text-primary transition-colors">Home</a>
-    <a href="/about" class="text-white text-lg hover:text-primary transition-colors">About</a>
-    <a href="/events" class="text-white text-lg hover:text-primary transition-colors">Events</a>
-    <a href="/contact" class="text-white text-lg hover:text-primary transition-colors">Contact</a>
-  </nav>
-
+    
   <!-- Social Media Icons -->
-  <div class="social-icons flex justify-center space-x-8 mt-4">
-    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="text-white text-xl hover:text-red-600 transition-colors">
+  <div class="social-icons flex justify-center space-x-6 mt-2">
+    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-red-600 transition-colors">
       <i class="fab fa-youtube"></i>
     </a>
-    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-white text-xl hover:text-pink-500 transition-colors">
+    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-pink-500 transition-colors">
       <i class="fab fa-instagram"></i>
     </a>
-    <a href="mailto:your-email@example.com" class="text-white text-xl hover:text-yellow-400 transition-colors">
+    <a href="mailto:your-email@example.com" class="text-white text-lg hover:text-yellow-400 transition-colors">
       <i class="fas fa-envelope"></i>
     </a>
-    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white text-xl hover:text-blue-600 transition-colors">
+    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-blue-600 transition-colors">
       <i class="fab fa-linkedin"></i>
     </a>
   </div>
 </footer>
+
+<style>
+  footer {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 2%;
+    text-align: center;
+  }
+
+  .logo-container img {
+    height: 50px; /* Adjust logo height */
+  }
+
+  .nav-links a {
+    font-size: 0.8rem; /* Decrease link font size */
+  }
+
+  .social-icons a {
+    font-size: 1.2rem; /* Adjust social media icon size */
+  }
+</style>

@@ -1,11 +1,14 @@
 <script>
     import MemberCard from './MemberCard.svelte';
-
+    import sahil from '$lib/assets/images/sahil.webp'; 
+    import sid from '$lib/assets/images/siddharth.webp';
+    import banani from '$lib/assets/images/banani.webp';
+    import ayush from '$lib/assets/images/ayush.webp';
     // Team members' data
     const teamMembers = [
       {
         name: "Sahil Kumar",
-        image: "navnit.webp",
+        image: sahil,
         phone: "+1234567890",
         instagram: "#",
         linkedin: "#",
@@ -21,7 +24,7 @@
       },
       {
         name: "Banani Das",
-        image: "banani.jpg",
+        image: banani,
         phone: "+1234567890",
         instagram: "#",
         linkedin: "#",
@@ -29,15 +32,15 @@
       },
       {
         name: "Siddharth",
-        image: "siddharth.jpg",
-        phone: "+1234567890",
-        instagram: "#",
-        linkedin: "#",
+        image: sid,
+        phone: "+919835273753",
+        instagram: "https://www.instagram.com/thessiddharth?igsh=ZTJ6eWtvcHpsdHQ1&utm_source=qr",
+        linkedin: "https://www.linkedin.com/in/siddharth-choudhary-77483228b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         email: "siddharth@example.com"
       },
       {
         name: "Ayush Bhushan",
-        image: "ayush.jpg",
+        image: ayush,
         phone: "+1234567890",
         instagram: "#",
         linkedin: "#",

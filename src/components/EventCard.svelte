@@ -189,4 +189,8 @@
         transform: translateY(-1px);
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     }
+    .event-tile-inner.flip {
+        transform: rotateY(180deg);
+    }
 </style>
+

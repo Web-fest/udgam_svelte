@@ -82,7 +82,7 @@
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="#home">About us</a></li>
+            <li><a href="/about">About us</a></li>
             <li><a href="/events">Events</a></li>
             <li><a href="../frontend_udgam/Sponsors.html">Our Sponsors</a></li>
             <li><a href="/past">Past Glimpses</a></li>

@@ -1,5 +1,6 @@
 <script>
     import MemberCard from './MemberCard.svelte'; // Adjust the path as necessary
+    import shibu from '$lib/assets/images/shibu.jpg';
   </script>
   
   <style>
@@ -32,7 +33,7 @@
       <h2>Secretaries</h2>
       <div class="member-cards">
         <MemberCard name="Anup Prasad" image="anup_prasad.jpg" phone="1234567890" instagram="#" linkedin="#" email="anup@example.com" />
-        <MemberCard name="Shibu Kumar" image="shibu_kumar.jpg" phone="1234567890" instagram="#" linkedin="#" email="shibu@example.com" />
+        <MemberCard name="Shibu Kumar" image="shibu.webp" phone="1234567890" instagram="#" linkedin="#" email="shibu@example.com" />
       </div>
     </div>
   

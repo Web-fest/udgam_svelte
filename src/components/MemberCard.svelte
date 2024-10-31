@@ -1,24 +1,36 @@
 <script>
-  export let name;
+  export let name = "Unknown Member"; // Default value
   export let image;
   export let phone;
   export let email;
   export let linkedin;
   export let instagram;
+
+  // State for mobile touch interaction
+  let isHovered = false;
+
+  // Touch event handlers
+  function handleTouchStart() {
+    isHovered = true;
+  }
+
+  function handleTouchEnd() {
+    isHovered = false;
+  }
 </script>
 
 <style>
   :root {
-    --card-bg-color: #2a2a2a; /* Darker background for a fantasy feel */
-    --border-color: #5c3c82; /* Dark mystic border color */
-    --icon-color: #c0c0c0; /* Light gray for icons */
-    --icon-hover-color: #a0d0e0; /* Light blue-gray for hover effect */
+    --card-bg-color: #2a2a2a;
+    --border-color: #5c3c82;
+    --icon-color: #c0c0c0;
+    --icon-hover-color: #a0d0e0;
   }
 
   .member-card {
     position: relative;
     width: 300px;
-    height: 300px;
+    height: 350px; /* Increased height */
     background-color: var(--card-bg-color);
     border-radius: 15px;
     border: 4px solid var(--border-color);
@@ -26,20 +38,20 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px;
-    font-family: 'Garamond', serif; /* Main font and complementary font */
+    font-family: 'Garamond', serif;
   }
 
-  .member-card:hover {
+  .member-card:hover,
+  .member-card.hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
   }
 
   img {
-  width: 100%;
-  height: 70%;
-  object-fit: cover;
-  transition: filter 0.3s ease;
-}
+    width: 100%;
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Allow the full image to be visible */
+  }
 
   .overlay {
     position: absolute;
@@ -57,10 +69,10 @@
     transition: opacity 0.3s ease;
     padding: 10px;
     box-sizing: border-box;
-    will-change: opacity; /* Hint to the browser */
   }
 
-  .member-card:hover .overlay {
+  .member-card:hover .overlay,
+  .member-card.hover .overlay {
     opacity: 1;
   }
 
@@ -76,32 +88,36 @@
   }
 
   .contact-icons a {
-    color: var(--icon-color); /* Light gray for icons */
+    color: var(--icon-color);
     font-size: 24px;
     transition: color 0.3s;
   }
 
   .contact-icons a:hover {
-    color: var(--icon-hover-color); /* Light blue-gray for hover effect */
+    color: var(--icon-hover-color);
   }
 </style>
 
-<div class="member-card">
-  <img src={`$lib/assets/images/${image}`} alt={`${name}'s profile picture`} loading="lazy" />
+<div
+  class="member-card {isHovered ? 'hover' : ''}"
+  on:touchstart={handleTouchStart}
+  on:touchend={handleTouchEnd}
+>
+  <img src={image} alt={`${name}'s profile picture`} loading="lazy" />
 
   <div class="overlay">
     <div class="name">{name}</div>
     <div class="contact-icons">
-      <a href={`tel:${phone}`} title="Phone">
+      <a href={`tel:${phone}`} title="Phone" aria-label="Call">
         <i class="fa-solid fa-phone"></i>
       </a>
-      <a href={`mailto:${email}`} title="Email">
+      <a href={`mailto:${email}`} title="Email" aria-label="Email">
         <i class="fa-solid fa-envelope"></i>
       </a>
-      <a href={linkedin} title="LinkedIn">
+      <a href={linkedin} title="LinkedIn" aria-label="LinkedIn Profile">
         <i class="fa-brands fa-linkedin"></i>
       </a>
-      <a href={instagram} title="Instagram">
+      <a href={instagram} title="Instagram" aria-label="Instagram Profile">
         <i class="fa-brands fa-instagram"></i>
       </a>
     </div>
