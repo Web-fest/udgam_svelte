@@ -17,11 +17,18 @@ export const actions = {
 			},
 		});
 
-		const cookie = response.headers.getSetCookie();
-		const finalCookie = cookie[0].split(" ")[0].replace("authToken=", "");
-		cookies.set('authToken', finalCookie, { path: '/' });
+		console.log(`Login Response Status: ${response.status}`);
 
-		return { success: true };
+		try {
+			const cookie = response.headers.getSetCookie();
+			const finalCookie = cookie[0].split(" ")[0].replace("authToken=", "");
+			cookies.set('authToken', finalCookie, { path: '/' });
+
+			return { success: true };
+		} catch (error) {
+			console.error(error);
+			throw redirect(301, "/")
+		}
 	}
 }
 

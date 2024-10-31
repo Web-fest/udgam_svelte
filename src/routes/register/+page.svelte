@@ -8,50 +8,13 @@
    let password = undefined;
    let usertype = undefined;
    let specialid = undefined;
-
-   const onregister = async (
-      name,
-      rollno,
-      email,
-      specialid,
-      password,
-      usertype,
-   ) => {
-      let data = {
-         name: name,
-         rollNumber: rollno,
-         email: email,
-         specialId: specialid,
-         password: password,
-         userType: usertype.toLowerCase(),
-      };
-      console.log(data);
-
-      const response = await fetch(
-         "http://129.154.255.30:8081/api/v1/auth/register",
-         {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-               "Content-Type": "application/json",
-            },
-         },
-      );
-      if (!response.status === 201) {
-         redirect(302, "/");
-         return;
-      } else {
-         redirect(301, "/");
-         return;
-      }
-   };
 </script>
 
 <body style="font-family: 'Cinzel';">
    <div class="login">
       <img src="/assets/register.jpg" alt="" class="login__img" />
-
-      <form action="" class="container">
+      <!-- <div class="login__box">Registrations coming soon!</div> -->
+      <form action="/login" method="post" class="container">
          <h1 class="login__title">
             <span style="font-family: 'Cinzel';">Sign Up</span>
          </h1>
@@ -64,6 +27,7 @@
                   <input
                      type="text"
                      required
+                     name="username"
                      class="login__input"
                      id="register-name"
                      placeholder=" "
@@ -81,6 +45,7 @@
                <div class="login__box-input">
                   <input
                      type="text"
+                     name="rollno"
                      required
                      class="login__input"
                      id="register-roll"
@@ -98,6 +63,7 @@
                <div class="login__box-input">
                   <input
                      type="text"
+                     name="uuid"
                      required
                      class="login__input"
                      id="register-id"
@@ -116,6 +82,7 @@
                   <input
                      type="email"
                      required
+                     name="email"
                      class="login__input"
                      id="register-email"
                      placeholder=" "
@@ -131,6 +98,7 @@
                <div class="login__box-input">
                   <input
                      type="password"
+                     name="password"
                      required
                      class="login__input"
                      id="register-pass"
@@ -172,6 +140,7 @@
                <div class="login__box-input">
                   <select
                      required
+                     name="role"
                      class="login__input"
                      id="register-role"
                      bind:value={usertype}
@@ -192,15 +161,7 @@
          <button
             type="submit"
             class="login__button"
-            style="color:black; font-family:'Cinzel';"
-            on:click={onregister(
-               name,
-               rollno,
-               email,
-               specialid,
-               password,
-               usertype,
-            )}>Sign Up</button
+            style="color:black; font-family:'Cinzel';">Sign Up</button
          >
 
          <p class="login__register">
@@ -618,5 +579,4 @@
       color: hsl(0, 0%, 100%);
       padding: 0.5rem;
    }
-
 </style>
