@@ -57,18 +57,6 @@
             <svelte:component this={Hero} />
         {/if}
 
-        <section id="events">
-            <h2>Featured Events</h2>
-            <div class="event-grid">
-                {#each events as event}
-                    <EventCard
-                        title={event.title}
-                        image={event.image}  
-                        description={event.description}
-                        link={event.link}
-                    />
-                {/each}
-            </div>
-        </section>
+       
     </main>
 </body>

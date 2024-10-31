@@ -1,12 +1,36 @@
 <script>
   import MemberCard from './MemberCard.svelte';
+  import amrish from '$lib/assets/images/amrish.webp';
+  import daksh from '$lib/assets/images/daksh.webp';
+  import sanjeev from '$lib/assets/images/sanjeev.webp';
+  import rahul from '$lib/assets/images/rahul.webp';
+  import anurag from '$lib/assets/images/anurag.webp';
+  import chunni from '$lib/assets/images/temp.webp';
+  import sananla from '$lib/assets/images/temp.webp';
+  import roshan from '$lib/assets/images/roshan.webp';
+  import manasvi from '$lib/assets/images/manasvi.webp';
+  import fauzia from '$lib/assets/images/fauzia.webp';
+  import rohan from '$lib/assets/images/temp.webp';
+  import subha from '$lib/assets/images/temp.webp';
+  import supriya from '$lib/assets/images/supriya.webp';
+  import me from '$lib/assets/images/me.webp';
+  import vaibhav from '$lib/assets/images/vaibhav.webp';
+  import vipin from '$lib/assets/images/vipin.webp';
+  import aman from '$lib/assets/images/aman.webp';
+  import navnit from '$lib/assets/images/navnit.webp';
+  import aditya from '$lib/assets/images/aditya.webp';
+  import prashant from '$lib/assets/images/temp.webp';
+  import siddharth from '$lib/assets/images/siddharthece.webp';
+
+
+
 
   const teamLeads = {
     conveyanceDiscipline: [
       {
         name: "Amrish Kumar",
         role: "Conveyance & Discipline Lead",
-        image: "amrish_kumar.jpg",
+        image: amrish,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -15,7 +39,7 @@
       {
         name: "Daksh Bhardwaj",
         role: "Conveyance & Discipline Lead",
-        image: "daksh_bhardwaj.jpg",
+        image: daksh,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -24,7 +48,7 @@
       {
         name: "Sanjeev Kumar",
         role: "Conveyance & Discipline Lead",
-        image: "sanjeev_kumar.jpg",
+        image: sanjeev,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -35,7 +59,7 @@
       {
         name: "Rahul Kumar Prasad",
         role: "Marketing Lead",
-        image: "rahul_prasad.jpg",
+        image: rahul,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -44,7 +68,7 @@
       {
         name: "Anurag Prasad",
         role: "Marketing Lead",
-        image: "anurag_prasad.jpg",
+        image: anurag,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -55,7 +79,7 @@
       {
         name: "Chunni Zangmu Bhutia",
         role: "Cultural Lead",
-        image: "chunni_bhutia.jpg",
+        image: chunni,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -64,7 +88,7 @@
       {
         name: "Sananla Butia",
         role: "Cultural Lead",
-        image: "sananla_butia.jpg",
+        image: sananla,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -75,7 +99,7 @@
       {
         name: "Roshan Srivastava",
         role: "Infrastructure & Wind Up Lead",
-        image: "roshan_srivastava.jpg",
+        image: roshan,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -84,7 +108,7 @@
       {
         name: "Manasvi Giri",
         role: "Infrastructure & Wind Up Lead",
-        image: "manasvi_giri.jpg",
+        image: manasvi,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -95,7 +119,7 @@
       {
         name: "Fauzia Arshad",
         role: "Graphics & Merchandise Lead",
-        image: "fauzia_arshad.jpg",
+        image: fauzia,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -104,7 +128,7 @@
       {
         name: "Rohan Darjee",
         role: "Graphics & Merchandise Lead",
-        image: "rohan_darjee.jpg",
+        image: rohan,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -115,7 +139,7 @@
       {
         name: "Subha Kumari",
         role: "Guest Receiving Lead",
-        image: "subha_kumari.jpg",
+        image: subha,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -124,7 +148,7 @@
       {
         name: "Supriya Kumari",
         role: "Guest Receiving Lead",
-        image: "supriya_kumari.jpg",
+        image: supriya,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -135,7 +159,7 @@
       {
         name: "Aditya Sharma",
         role: "Web/App Dev Lead",
-        image: "/lib/assets/images/vipin.webp",
+        image: me,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -144,7 +168,7 @@
       {
         name: "Vaibhav Mishra",
         role: "Sponsorship Lead",
-        image: "vaibhav_mishra.jpg",
+        image: vaibhav,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -153,7 +177,7 @@
       {
         name: "Vipin Mishra",
         role: "Events Lead",
-        image: "vipin.webp",
+        image: vipin,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -162,7 +186,7 @@
       {
         name: "Amandeep",
         role: "Publicity Lead",
-        image: "amandeep.jpg",
+        image: aman,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -171,7 +195,7 @@
       {
         name: "Navnit Kr Sharma",
         role: "Content Lead",
-        image: "navnit_sharma.jpg",
+        image: navnit,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -180,7 +204,7 @@
       {
         name: "Aditya Prasad",
         role: "Technical Lead",
-        image: "aditya_prasad.jpg",
+        image: aditya,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -189,7 +213,7 @@
       {
         name: "Prashant Kumar",
         role: "Hospitality & Logistics Lead",
-        image: "prashant_kumar.jpg",
+        image: prashant,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -198,7 +222,7 @@
       {
         name: "Siddharth Chandra Prabhakar",
         role: "Medical Lead",
-        image: "siddharth_prabhakar.jpg",
+        image: siddharth,
         phone: "1234567890",
         instagram: "#",
         linkedin: "#",
@@ -342,7 +366,7 @@
       <MemberCard
         name="Aditya Sharma"
         role="Web/App Dev Lead"
-        image="aditya_sharma.jpg"
+        image= {me}
         phone="1234567890"
         instagram="#"
         linkedin="#"
@@ -355,7 +379,7 @@
       <MemberCard
         name="Vaibhav Mishra"
         role="Sponsorship Lead"
-        image="vaibhav_mishra.jpg"
+        image={vaibhav}
         phone="1234567890"
         instagram="#"
         linkedin="#"
@@ -368,7 +392,7 @@
       <MemberCard
         name="Vipin Mishra"
         role="Events Lead"
-        image="vipin.webp"
+        image= {vipin}
         phone="1234567890"
         instagram="#"
         linkedin="#"
@@ -381,7 +405,7 @@
       <MemberCard
         name="Amandeep"
         role="Publicity Lead"
-        image="amandeep.jpg"
+        image= {aman}
         phone="1234567890"
         instagram="#"
         linkedin="#"
@@ -394,7 +418,7 @@
       <MemberCard
         name="Navnit Kr Sharma"
         role="Content Lead"
-        image="navnit_sharma.jpg"
+        image= {navnit}
         phone="1234567890"
         instagram="#"
         linkedin="#"
@@ -407,7 +431,7 @@
       <MemberCard
         name="Aditya Prasad"
         role="Technical Lead"
-        image="aditya_prasad.jpg"
+        image= {aditya}
         phone="1234567890"
         instagram="#"
         linkedin="#"
@@ -420,7 +444,7 @@
       <MemberCard
         name="Prashant Kumar"
         role="Hospitality & Logistics Lead"
-        image="prashant_kumar.jpg"
+        image={prashant}
         phone="1234567890"
         instagram="#"
         linkedin="#"
@@ -433,7 +457,7 @@
       <MemberCard
         name="Siddharth Chandra Prabhakar"
         role="Medical Lead"
-        image="siddharth_prabhakar.jpg"
+        image={siddharth}
         phone="1234567890"
         instagram="#"
         linkedin="#"
