@@ -50,7 +50,7 @@
 </script>
 
 <main>
-    <h1 class="title">Events</h1>
+    <h1 class="page-title main-title">Events</h1>
 
     <!-- Countdown Timer Section -->
     <section class="countdown">
@@ -81,11 +81,15 @@
 </main>
 
 <style>
-    .title {
-        text-align: center;
-        margin: 20px 0;
+   .page-title {
+      text-align: center;
+      font-size: 36px;
+      padding-top: 100px;
+      color: #ff6b6b; /* Light color for the title */
+      margin: 40px 0;
+      font-family: 'Cinzel', serif; /* Fantasy-themed font */
     }
-
+  
     /* Countdown Timer Styling */
     .countdown {
         text-align: center;

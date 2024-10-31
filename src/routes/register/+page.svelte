@@ -619,8 +619,4 @@
       padding: 0.5rem;
    }
 
-   /* Optional: Style specifically for roll number input */
-   #register-roll {
-      text-transform: uppercase; /* Convert input to uppercase */
-   }
 </style>

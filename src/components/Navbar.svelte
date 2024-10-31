@@ -87,6 +87,7 @@
             <li><a href="../frontend_udgam/Sponsors.html">Our Sponsors</a></li>
             <li><a href="/past">Past Glimpses</a></li>
             <li><a href="/team">Core Team</a></li>
+            <li><a href="">OUR FICs</a></li>
             <li><a href="../frontend_udgam/contact.html">Contact Us</a></li>
             <li>
                 {#if $userLoginStore === undefined}

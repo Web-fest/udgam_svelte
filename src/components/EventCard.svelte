@@ -108,7 +108,6 @@
     .event-image-container img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
         transition: opacity 0.5s ease-in-out;
         opacity: 0;
     }
@@ -191,6 +190,32 @@
     }
     .event-tile-inner.flip {
         transform: rotateY(180deg);
+    }
+
+    @media screen and (max-width: 480px) {
+        .event-tile {
+            width: 100%;
+            height: 400px;
+        }
+
+        .event-image-container img {
+        overflow: hidden;
+        object-fit: fill;
+    }
+
+
+        .event-card-back h3, .event-tile-title h3 {
+            font-size: 1.2rem;
+        }
+
+        .event-card-back p {
+            font-size: 1rem;
+        }
+
+        .event-register-btn {
+            font-size: 1rem;
+            padding: 0.5rem 0.7rem;
+        }
     }
 </style>
 
