@@ -19,7 +19,7 @@
   import aditya from '$lib/assets/images/aditya.webp';
   import prashant from '$lib/assets/images/prashant.webp';
   import siddharth from '$lib/assets/images/siddharthece.webp';
-
+  import subha from '$lib/assets/images/subha.webp';
 
 
 
@@ -362,6 +362,18 @@
         email="b220021@nitsikkim.ac.in"
       />
       <p class="team-name">Events</p>
+    </div>
+    <div class="member-card">
+      <MemberCard
+        name="Subha Kumari"
+        role="Guest Receiving Lead"
+        image= {subha}
+        phone="+919341115306"
+        instagram="https://www.instagram.com/shuva_garg4204/"
+        linkedin="https://www.linkedin.com/in/shubha-kumari-96b070294/"
+        email="b220093@nitsikiim.ac.in"
+      />
+      <p class="team-name">Guest Receiving</p>
     </div>
 
     <div class="member-card">

@@ -2,7 +2,7 @@
   import sahil from "$lib/assets/images/sahil.webp";
   import sid from "$lib/assets/images/siddharth.webp";
   import banani from "$lib/assets/images/banani.webp";
-  import harshit from "$lib/assets/images/harshit.webp";
+  import ayush from "$lib/assets/images/ayush.webp";
 
   const teamMembers = [
     {
@@ -27,16 +27,16 @@
       email: "b220047@nitsikkim.ac.in",
     },
     {
-      name: "Harshit Vyas",
-      image: harshit,
-      phone: "+919509355025",
+      name: "Ayush Bhushan",
+      image: ayush,
+      phone: "+917488252185",
       instagram:
-        "https://www.instagram.com/harshit_vyas27/profilecard/?igsh=MWg1YWRhaXBydjJwZg==",
+        "https://www.instagram.com/ayush_bhushan11?igsh=MWZzajVldHVmanA5cQ%3D%3D&utm_source=qr",
       linkedin:
-        "https://www.linkedin.com/in/harshit-vyas-330066257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "http://linkedin.com/in/ayush-bhushan-624b2426b",
 
       position: "General Secretary",
-      email: "b220014@nitsikkim.ac.in",
+      email: "b220098@nitsikkim.ac.in",
     },
     {
       name: "Siddharth",
