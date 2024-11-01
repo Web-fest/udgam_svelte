@@ -17,8 +17,9 @@
 <body style="font-family: 'Cinzel';">
   <div class="login">
     <img src="/assets/login-bg.png" alt="" class="login__img" />
+    <div class="login__box">Registrations coming soon!</div>
 
-    <form action="/" method="post" class="container">
+    <!-- <form action="/" method="post" class="container">
       <h1 class="login__title">Login</h1>
 
       <div class="login__content">
@@ -59,7 +60,6 @@
               on:click={togglePassword}
             ></i>
             <label for="login-pass" class="login__label">Password</label>
-            <!-- <i class="ri-eye-off-line login__eye" id="login-eye"></i> -->
           </div>
         </div>
 
@@ -95,7 +95,7 @@
       <p class="login__register">
         Don't have an account? <a href="/register">Sign up</a>
       </p>
-    </form>
+    </form> -->
   </div>
   <!-- <script>
     // Get the password input and eye icon elements

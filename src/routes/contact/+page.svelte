@@ -11,6 +11,7 @@
       phone: "+917076448001",
       instagram:
         "https://www.instagram.com/sahil_srgm/profilecard/?igsh=cjEwNWlna2hkbmd5",
+      position: "President",
       linkedin: "https://www.linkedin.com/in/sahil-kumar-827410283/",
       email: "b220063@nitsikkim.ac.in",
     },
@@ -22,6 +23,7 @@
         "https://www.instagram.com/banani._.27?utm_source=qr&igsh=d3Z4ZnYydHI1OXg2",
       linkedin:
         "https://www.linkedin.com/in/banani-das-238611300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+      position: "Vice-President",
       email: "b220047@nitsikkim.ac.in",
     },
     {
@@ -32,6 +34,8 @@
         "https://www.instagram.com/harshit_vyas27/profilecard/?igsh=MWg1YWRhaXBydjJwZg==",
       linkedin:
         "https://www.linkedin.com/in/harshit-vyas-330066257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+
+      position: "General Secretary",
       email: "b220014@nitsikkim.ac.in",
     },
     {
@@ -42,6 +46,8 @@
         "https://www.instagram.com/thessiddharth?igsh=ZTJ6eWtvcHpsdHQ1&utm_source=qr",
       linkedin:
         "https://www.linkedin.com/in/siddharth-choudhary-77483228b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+
+      position: "Treasurer",
       email: "b220034@nitsikkim.ac.in",
     },
 

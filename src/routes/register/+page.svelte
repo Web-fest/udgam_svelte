@@ -13,10 +13,8 @@
 <body style="font-family: 'Cinzel';">
    <div class="login">
       <img src="/assets/register.jpg" alt="" class="login__img" />
-      <!-- <div class="login__box">Registrations coming soon!</div> -->
-      <form action="/login" method="post" class="container">
-      <!-- <div class="login__box">Registrations coming soon!</div> -->
-      <form action="/login" method="post" class="container">
+      <div class="login__box">Registrations coming soon!</div>
+      <!-- <form action="/login" method="post" class="container">
          <h1 class="login__title">
             <span style="font-family: 'Cinzel';">Sign Up</span>
          </h1>
@@ -29,7 +27,6 @@
                   <input
                      type="text"
                      required
-                     name="username"
                      name="username"
                      class="login__input"
                      id="register-name"
@@ -49,7 +46,6 @@
                   <input
                      type="text"
                      name="rollno"
-                     name="rollno"
                      required
                      class="login__input"
                      id="register-roll"
@@ -67,7 +63,6 @@
                <div class="login__box-input">
                   <input
                      type="text"
-                     name="uuid"
                      name="uuid"
                      required
                      class="login__input"
@@ -88,7 +83,6 @@
                      type="email"
                      required
                      name="email"
-                     name="email"
                      class="login__input"
                      id="register-email"
                      placeholder=" "
@@ -104,7 +98,6 @@
                <div class="login__box-input">
                   <input
                      type="password"
-                     name="password"
                      name="password"
                      required
                      class="login__input"
@@ -148,7 +141,6 @@
                   <select
                      required
                      name="role"
-                     name="role"
                      class="login__input"
                      id="register-role"
                      bind:value={usertype}
@@ -170,13 +162,12 @@
             type="submit"
             class="login__button"
             style="color:black; font-family:'Cinzel';">Sign Up</button
-            style="color:black; font-family:'Cinzel';">Sign Up</button
          >
 
          <p class="login__register">
             Already have an account? <a href="/login">Login</a>
          </p>
-      </form>
+      </form> -->
    </div>
 
    <!-- Add this script tag at the end of the body -->
