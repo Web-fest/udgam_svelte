@@ -21,16 +21,16 @@
     
   <!-- Social Media Icons -->
   <div class="social-icons flex justify-center space-x-6 mt-2">
-    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-red-600 transition-colors">
+    <a href="https://www.youtube.com/@NITSikkimUdgam/featured" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-red-600 transition-colors">
       <i class="fab fa-youtube"></i>
     </a>
-    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-pink-500 transition-colors">
+    <a href="https://www.instagram.com/udgam_nitsikkim?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-pink-500 transition-colors">
       <i class="fab fa-instagram"></i>
     </a>
-    <a href="mailto:your-email@example.com" class="text-white text-lg hover:text-yellow-400 transition-colors">
+    <a href="udgam@nitsikkim.ac.in" class="text-white text-lg hover:text-yellow-400 transition-colors">
       <i class="fas fa-envelope"></i>
     </a>
-    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-blue-600 transition-colors">
+    <a href="https://www.linkedin.com/school/national-institute-of-technology-sikkim/" target="_blank" rel="noopener noreferrer" class="text-white text-lg hover:text-blue-600 transition-colors">
       <i class="fab fa-linkedin"></i>
     </a>
   </div>

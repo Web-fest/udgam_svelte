@@ -11,7 +11,7 @@
     import vidhi from '$lib/assets/images/vidhi.webp';
     import chandan from '$lib/assets/images/chandan.webp';
     import ujjwal from '$lib/assets/images/ujjwal.webp';
-    import khushi from '$lib/assets/images/temp.webp';
+    import khushi from '$lib/assets/images/khushi.webp';
     import priyanshu from '$lib/assets/images/priyanshu.webp';
   </script>
   
@@ -53,7 +53,7 @@
       <h2>Convenors</h2>
       <div class="member-cards">
         <MemberCard name="Sharim Fahran" image={sharim} phone="+919564103801" instagram="https://www.instagram.com/sha_rim21?igsh=YjIzb3N2d2J5dWI=" linkedin="https://www.linkedin.com/in/sharim-farhan-414094294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" email="b220020@nitsikkim.ac.in" />
-        <MemberCard name="Anshika Rana" image={anshika} phone="+919350115477"instagram="https://www.instagram.com/ " linkedin=" https://www.linkedin.com/in/anshika-rana-5a919b253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+        <MemberCard name="Anshika Rana" image={anshika} phone="+919350115477"instagram="https://www.instagram.com/anshikarajput47_/profilecard/?igsh=cTRteWVlb2hrZHJo  " linkedin=" https://www.linkedin.com/in/anshika-rana-5a919b253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 " email="b220005@nitsikkim.ac.in" />
       </div>
     </div>
@@ -72,10 +72,10 @@
     <div class="team-level">
       <h2>Associate Treasurers</h2>
       <div class="member-cards">
-        <MemberCard name="Khushi Kumari Chaurasia" image={khushi} phone="1234567890" instagram="#" linkedin="#" email="khushi@example.com" />
-        <MemberCard name="Ujjwal Kr Rajak" image={ujjwal} phone="1234567890" instagram="#" linkedin="#" email="ujjwal@example.com" />
-        <MemberCard name="Chandan Gautam" image={chandan} phone="1234567890" instagram="#" linkedin="#" email="chandan@example.com" />
-        <MemberCard name="Priyanshu Raj" image={priyanshu} phone="1234567890" instagram="#" linkedin="#" email="priyanshu@example.com" />
+        <MemberCard name="Khushi Kumari Chaurasia" image={khushi} phone="+919334480212"  linkedin="https://www.linkedin.com/in/khus06" email="b220080@nitsikkim.ac.in" />
+        <MemberCard name="Ujjwal Kr Rajak" image={ujjwal} phone="+918371953133" instagram="https://www.instagram.com/ujjwal_rajak_/profilecard/?igsh=MWVmaGN6c2Q3MnNsaA==" linkedin="https://www.linkedin.com/in/ujjwal-kumar-rajak?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" email="b220037@nitsikkim.ac.in" />
+        <MemberCard name="Chandan Gautam" image={chandan} phone="+917379594274" instagram="https://www.instagram.com/chandan_kumar7960/" linkedin="https://www.linkedin.com/in/chandan-gautam-753303292/" email="b220008@nitsikkim.ac.in" />
+        <MemberCard name="Priyanshu Raj" image={priyanshu} phone="+918789156956" instagram="https://www.instagram.com/priyanshu_coolboy" linkedin="https://www.linkedin.com/in/priyanshu-raj-singh-9551bb296/" email="b220089@nitsikkim.ac.in" />
       </div>
     </div>
   </div>

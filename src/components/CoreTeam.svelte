@@ -13,7 +13,7 @@
       {
         name: "Sahil Kumar",
         image: sahil,
-        phone: "+91 70764 48001",
+        phone: "+917076448001",
         instagram: "https://www.instagram.com/sahil_srgm/profilecard/?igsh=cjEwNWlna2hkbmd5",
         linkedin: "https://www.linkedin.com/in/sahil-kumar-827410283/",
         email: "b220063@nitsikkim.ac.in"
@@ -22,9 +22,9 @@
         name: "Prabhakar",
         image: prabhakar,
         phone: "+1234567890",
-        instagram: "#",
-        linkedin: "#",
-        email: "prabhakar@example.com"
+        instagram: "https://www.instagram.com/prabhakar.anshik/profilecard/?igsh=MWJudnJ6ZDlveWY4aA==",
+        linkedin: "https://www.linkedin.com/in/prabhakar-a20666291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        email: "b220086@nitsikkim.ac.in"
       },
       {
         name: "Banani Das",
@@ -61,10 +61,10 @@
       {
         name: "Kabir Man Rai",
         image: kabir,
-        phone: "+1234567890",
-        instagram: "#",
-        linkedin: "#",
-        email: "kabir@example.com"
+        phone: "+919800017676",
+        instagram: "https://www.instagram.com/kush_b_rai/profilecard/?igsh=MTF4YXZ6ajF0Z283aw==",
+        linkedin: "https://www.linkedin.com/in/kabir-man-rai?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        email: "b220132@nitsikkim.ac.in"
       }
     ];
   </script>
