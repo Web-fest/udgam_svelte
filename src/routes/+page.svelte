@@ -2,9 +2,7 @@
     import { userLoginStore } from "../lib/userLoginStore";
     import { onMount } from 'svelte';
     import EventCard from '../components/EventCard.svelte'; // Adjust the path as necessary
-    import musicNight from '$lib/assets/images/music.jpg';
-    import danceCompetition from '$lib/assets/images/dance.jpeg';
-    import photo from '$lib/assets/images/photo.png';
+
     
     export let data;
 
@@ -27,26 +25,6 @@
         }
     });
 
-    const events = [
-        {
-            title: 'Music Night',
-            image: musicNight, // Imported image
-            description: 'Experience electrifying performances by top artists',
-            link: '#',
-        },
-        {
-            title: 'Dance Competition',
-            image: danceCompetition, // Imported image
-            description: 'Showcase your moves and win exciting prizes',
-            link: '#',
-        },
-        {
-            title: 'Photography Competition',
-            image: photo, // Imported image
-            description: 'Click the best photo ever',
-            link: '#',
-        },
-    ];
 </script>
 
 <body>

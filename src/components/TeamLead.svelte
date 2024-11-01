@@ -5,7 +5,7 @@
   import sanjeev from '$lib/assets/images/sanjeev.webp';
   import rahul from '$lib/assets/images/rahul.webp';
   import anurag from '$lib/assets/images/anurag.webp';
-  import chunni from '$lib/assets/images/temp.webp';
+  import chunni from '$lib/assets/images/chunni.webp';
   import sananla from '$lib/assets/images/sananla.webp';
   import roshan from '$lib/assets/images/roshan.webp';
   import manasvi from '$lib/assets/images/manasvi.webp';
@@ -77,9 +77,8 @@
         name: "Chunni Zangmu Bhutia",
         role: "Cultural Lead",
         image: chunni,
-        phone: "1234567890",
-        instagram: "#",
-        linkedin: "#",
+        phone: "+918167528687",
+        instagram: "https://www.instagram.com/_czb?igsh=MXBnOXowbzhwNGIyMw==",
         email: "b220100@nitsikkim.ac.in"
       },
       {
@@ -87,8 +86,8 @@
         role: "Cultural Lead",
         image: sananla,
         phone: "+918101628605",
-        instagram: "#",
-        linkedin: "#",
+        instagram: "https://www.instagram.com/sayssanan?igsh=c2VqMnlpZzR2dm9i",
+        linkedin: "https://www.linkedin.com/in/sananla-bhutia-4671a1329/",
         email: "b220028@nitsikkim.ac.in"
       }
     ],
@@ -384,7 +383,7 @@
         role="Content Lead"
         image= {navnit}
         phone="+918649844682"
-        instagram="#"
+        instagram="https://www.instagram.com/nav.nit/profilecard/?igsh=aTJ5dXZvazE5Mm84"
         linkedin="http://www.linkedin.com/in/navnit-kr-sharma"
         email="b220137@nitsikkim.ac.in"
       />

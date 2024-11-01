@@ -41,11 +41,13 @@
         text-align: center;
         font-size: 36px;
         color: #ff6b6b; /* Light color for the title */
-        margin: 60px 0;
+        margin: 100px 0;
+    
         font-family: 'Cinzel', serif; /* Fantasy-themed font */
     }
 
     .glimpse-gallery {
+    
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

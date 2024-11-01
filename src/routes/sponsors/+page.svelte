@@ -1,22 +1,46 @@
 <script>
     // Import paths from lib/assets/images
-    import logo1 from '$lib/assets/images/temp.webp';
-    import logo2 from '$lib/assets/images/temp.webp';
-    import logo3 from '$lib/assets/images/temp.webp';
+    import logo1 from '$lib/assets/images/sbi.webp';
+    import logo2 from '$lib/assets/images/cisb.webp';
+    import logo3 from '$lib/assets/images/nhpc.webp';
+    import hospitality1 from '$lib/assets/images/alnus.webp';
+    import hospitality2 from '$lib/assets/images/sarovar.webp';
+    import hospitality3 from '$lib/assets/images/star.webp';
 
-    // Define an array of sponsor data with imported images
+    // Define sponsor and hospitality partner data
     const sponsors = [
-        { name: "Sponsor One", logo: logo1, link: "https://sponsor1.com" },
-        { name: "Sponsor Two", logo: logo2, link: "https://sponsor2.com" },
-        { name: "Sponsor Three", logo: logo3, link: "https://sponsor3.com" },
+        { name: "SBI", logo: logo1, link: "https://sponsor1.com", title: "Bronze Sponsor" },
+        { name: "CISB", logo: logo2, link: "https://sponsor2.com" },
+        { name: "NHPC Rangitnagar", logo: logo3, link: "https://sponsor3.com" },
+    ];
+
+    const hospitalityPartners = [
+        { name: " The Alnus, Rangvangla", logo: hospitality1, link: "https://hospitality1.com" },
+        { name: "Sikkim Sarovar", logo: hospitality2, link: "https://hospitality2.com" },
+        { name: "Ravangla Star", logo: hospitality3, link: "https://hospitality3.com" },
     ];
 </script>
 
 <main class="sponsors-page">
     <h1 class="page-title">Our Sponsors</h1>
 
+    <!-- Sponsors Row with Title for First Sponsor -->
     <section class="sponsors-grid">
-        {#each sponsors as { name, logo, link }}
+        {#each sponsors as { name, logo, link, title }, i}
+            <a href={link} class="sponsor-card" target="_blank" rel="noopener noreferrer">
+                {#if i === 0 && title}
+                    <h3 class="sponsor-title">{title}</h3>
+                {/if}
+                <img src={logo} alt={name} class="sponsor-logo" />
+                <h2 class="sponsor-name">{name}</h2>
+            </a>
+        {/each}
+    </section>
+
+    <!-- Hospitality Partners Row -->
+    <h2 class="hospitality-title">Hospitality Partners</h2>
+    <section class="sponsors-grid">
+        {#each hospitalityPartners as { name, logo, link }}
             <a href={link} class="sponsor-card" target="_blank" rel="noopener noreferrer">
                 <img src={logo} alt={name} class="sponsor-logo" />
                 <h2 class="sponsor-name">{name}</h2>
@@ -29,13 +53,13 @@
     .sponsors-page {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        font-weight: bold;
         min-height: 100vh;
         padding: 2rem 1rem;
-        text-align: center;
         font-family: 'Cinzel', serif;
         color: #f5d142;
+        text-align: center;
     }
 
     .page-title {
@@ -46,19 +70,18 @@
     }
 
     .sponsors-grid {
-        display: grid;
+        display: flex;
         gap: 1.5rem;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         padding: 1rem;
-        justify-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .sponsor-card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        max-width: 200px;
+        width: 180px;
         padding: 1rem;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 12px;
@@ -71,6 +94,13 @@
     .sponsor-card:hover {
         transform: translateY(-6px);
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .sponsor-title {
+        font-size: 0.9rem;
+        color: #c0a060;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
     }
 
     .sponsor-logo {
@@ -88,7 +118,14 @@
         margin-top: 0.5rem;
     }
 
-    /* Responsive Design Adjustments */
+    .hospitality-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #f5d142;
+        margin: 3rem 0 1rem;
+    }
+
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
         .page-title {
             font-size: 2rem;
@@ -96,11 +133,10 @@
 
         .sponsors-grid {
             gap: 1rem;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         }
 
         .sponsor-card {
-            max-width: 160px;
+            width: 140px;
         }
 
         .sponsor-name {
