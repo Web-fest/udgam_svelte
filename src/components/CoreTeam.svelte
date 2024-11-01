@@ -43,12 +43,12 @@
         email: "b220034@nitsikkim.ac.in"
       },
       {
-        name: "Ayush Bhushan",
-        image: ayush,
-        phone: "+917488252185",
-        instagram: "https://www.instagram.com/ayush_bhushan11?igsh=MWZzajVldHVmanA5cQ%3D%3D&utm_source=qr",
-        linkedin: "http://linkedin.com/in/ayush-bhushan-624b2426b",
-        email: "b220098@nitsikkim.ac.in"
+        name: "Kabir Man Rai",
+        image: kabir,
+        phone: "+919800017676",
+        instagram: "https://www.instagram.com/kush_b_rai/profilecard/?igsh=MTF4YXZ6ajF0Z283aw==",
+        linkedin: "https://www.linkedin.com/in/kabir-man-rai?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        email: "b220132@nitsikkim.ac.in"
       },
       {
         name: "Harshit Vyas",
@@ -59,13 +59,14 @@
         email: "b220014@nitsikkim.ac.in"
       },
       {
-        name: "Kabir Man Rai",
-        image: kabir,
-        phone: "+919800017676",
-        instagram: "https://www.instagram.com/kush_b_rai/profilecard/?igsh=MTF4YXZ6ajF0Z283aw==",
-        linkedin: "https://www.linkedin.com/in/kabir-man-rai?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-        email: "b220132@nitsikkim.ac.in"
-      }
+        name: "Ayush Bhushan",
+        image: ayush,
+        phone: "+917488252185",
+        instagram: "https://www.instagram.com/ayush_bhushan11?igsh=MWZzajVldHVmanA5cQ%3D%3D&utm_source=qr",
+        linkedin: "http://linkedin.com/in/ayush-bhushan-624b2426b",
+        email: "b220098@nitsikkim.ac.in"
+      },
+     
     ];
   </script>
   

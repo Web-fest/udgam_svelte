@@ -9,15 +9,15 @@
 
     // Define sponsor and hospitality partner data
     const sponsors = [
-        { name: "SBI", logo: logo1, link: "https://sponsor1.com", title: "Bronze Sponsor" },
-        { name: "CISB", logo: logo2, link: "https://sponsor2.com" },
-        { name: "NHPC Rangitnagar", logo: logo3, link: "https://sponsor3.com" },
+        { name: "SBI", logo: logo1, link: "https://www.onlinesbi.sbi/", title: "Bronze Sponsor" },
+        { name: "CISB", logo: logo2, link: "https://cisb.co.in/" },
+        { name: "NHPC Rangitnagar", logo: logo3, link: "https://www.nhpcindia.com/welcome/tender_detail/6654" },
     ];
 
     const hospitalityPartners = [
-        { name: " The Alnus, Rangvangla", logo: hospitality1, link: "https://hospitality1.com" },
-        { name: "Sikkim Sarovar", logo: hospitality2, link: "https://hospitality2.com" },
-        { name: "Ravangla Star", logo: hospitality3, link: "https://hospitality3.com" },
+        { name: " The Alnus, Rangvangla", logo: hospitality1, link: "https://www.facebook.com/thealnus.ravangla/" },
+        { name: "Sikkim Sarovar", logo: hospitality2, link: "https://www.sikkimsarovarhotels.com/" },
+        { name: "Ravangla Star", logo: hospitality3, link: "https://www.facebook.com/ravongla/" },
     ];
 </script>
 
