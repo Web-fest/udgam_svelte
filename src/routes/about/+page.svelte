@@ -11,19 +11,19 @@
             <div class="text-content">
                 <h1>About {festName}</h1>
                 <p>
-                    {festName} is an annual cultural extravaganza celebrating
-                    art, culture, and creativity. This year’s theme, rooted in
-                    fiction and fantasy, transforms our campus into a realm of
-                    enchantment, offering students a platform to showcase their
-                    talents, engage in competitions, and enjoy an immersive experience
-                    filled with vibrant performances and mesmerizing visuals.
+                    {festName} is an annual cultural extravaganza celebrating art,
+                    culture, and creativity. This year’s theme, rooted in fiction
+                    and fantasy, transforms our campus into a realm of enchantment,
+                    offering students a platform to showcase their talents, engage
+                    in competitions, and enjoy an immersive experience filled with
+                    vibrant performances and mesmerizing visuals.
                 </p>
                 <p>
-                    Hosted by {collegeName}, the fest brings together
-                    students from across disciplines, celebrating diversity,
-                    creativity, and unity through the transformative power
-                    of culture. Join us in this journey through fantastical
-                    landscapes and unforgettable memories!
+                    Hosted by {collegeName}, the fest brings together students
+                    from across disciplines, celebrating diversity, creativity,
+                    and unity through the transformative power of culture. Join
+                    us in this journey through fantastical landscapes and
+                    unforgettable memories!
                 </p>
             </div>
         </div>
