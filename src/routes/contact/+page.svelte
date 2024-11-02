@@ -42,6 +42,7 @@
         name: "Harshit Vyas",
         image: harshit,
         phone: "+919509355025",
+        position: "General Secretary",
         instagram: "https://www.instagram.com/harshit_vyas27/profilecard/?igsh=MWg1YWRhaXBydjJwZg==",
         linkedin: "https://www.linkedin.com/in/harshit-vyas-330066257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         email: "b220014@nitsikkim.ac.in"

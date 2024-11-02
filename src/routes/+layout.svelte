@@ -24,6 +24,10 @@
         });
     });
 </script>
+<svelte:head>
+  <title>UDGAM' 24</title>
+</svelte:head>
+
 
 <main>
     <Navbar />

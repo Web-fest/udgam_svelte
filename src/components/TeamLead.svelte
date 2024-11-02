@@ -82,7 +82,7 @@
         email: "b220100@nitsikkim.ac.in"
       },
       {
-        name: "Sananla Butia",
+        name: "Sananla Bhutia",
         role: "Cultural Lead",
         image: sananla,
         phone: "+918101628605",
