@@ -4,7 +4,7 @@
     import anup from '$lib/assets/images/anup.webp';
     import anshika from '$lib/assets/images/anshika.webp';
     import sharim from '$lib/assets/images/sharim.webp';
-    import prithwish from '$lib/assets/images/prithwish.webp';
+    // import prithwish from '$lib/assets/images/prithwish.webp';
     import dhanraj from '$lib/assets/images/dhanraj.webp';
     import raj from '$lib/assets/images/raj.webp';
     import ankit from '$lib/assets/images/ankit.webp';
@@ -61,7 +61,7 @@
     <div class="team-level">
       <h2>Joint Secretaries</h2>
       <div class="member-cards">
-        <MemberCard name="Prithwish Mukhopadhyay" image={prithwish} phone="+919679050444" instagram="https://www.instagram.com/p.r.i.t.h.w.i.s.h_7/profilecard/?igsh=bHlzcW5xenZpbzcx"  email="b220088@nitsikkim.ac.in" />
+        <!-- <MemberCard name="Prithwish Mukhopadhyay" image={prithwish} phone="+919679050444" instagram="https://www.instagram.com/p.r.i.t.h.w.i.s.h_7/profilecard/?igsh=bHlzcW5xenZpbzcx"  email="b220088@nitsikkim.ac.in" /> -->
         <MemberCard name="Raj Kumar Prasad" image={raj} phone="+919883936360" instagram="https://www.instagram.com/rajpd_3567/profilecard/?igsh=b3F0MGRvZzlwZGFz" linkedin="https://www.linkedin.com/in/rajkrprasad3344/" email="b220025@nitsikkim.ac.in" />
         <MemberCard name="Vidhi Verma" image={vidhi} phone="+917850092438" instagram="https://www.instagram.com/._vidhzz._12?igsh=MW1ydmQ2bWEwYXp1cQ==" linkedin="https://www.linkedin.com/in/vidhi-verma-8a4976285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" email="b220038@nitsikkim.ac.in" />
         <MemberCard name="Dhanraj Siddh" image={dhanraj} phone="+919079959848" instagram="#" linkedin="#" email="dhanraj@example.com" />

@@ -8,20 +8,20 @@
     onMount(async () => {
         Footer = (await import('../components/Footer.svelte')).default;
 
-        // Disable right-click context menu
-        document.addEventListener("contextmenu", function (e) {
-            e.preventDefault();
-        });
+        // // Disable right-click context menu
+        // document.addEventListener("contextmenu", function (e) {
+        //     e.preventDefault();
+        // });
 
-        // Prevent specific key combinations
-        document.addEventListener("keydown", function (e) {
-            // Prevent F12, Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+U
-            if (e.key === "F12" || 
-                (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) || 
-                (e.ctrlKey && e.key === "U")) {
-                e.preventDefault();
-            }
-        });
+        // // Prevent specific key combinations
+        // document.addEventListener("keydown", function (e) {
+        //     // Prevent F12, Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+U
+        //     if (e.key === "F12" || 
+        //         (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) || 
+        //         (e.ctrlKey && e.key === "U")) {
+        //         e.preventDefault();
+        //     }
+        // });
     });
 </script>
 <svelte:head>

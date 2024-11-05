@@ -1,8 +1,8 @@
 <script>
     import { onMount } from "svelte";
-    import heroBg from "$lib/assets/images/hero-bg.webp"; // Import the WebP background image
+    import heroBgVideo from "$lib/assets/videos/hero-bg.webm"; // Import the WebM video
 
-    let isLoaded = false; // Flag to check if the image is loaded
+    let isLoaded = false; // Flag to check if the video is loaded
 
     function writingEffect() {
         const udgamTitle = document.getElementById("udgam-title");
@@ -17,8 +17,8 @@
 
     onMount(() => {
         writingEffect();
-        
-        // Set up IntersectionObserver for lazy loading the background image
+
+        // Set up IntersectionObserver for lazy loading the video background
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -34,14 +34,17 @@
 </script>
 
 <div>
-    <section
-        id="home"
-        class="hero"
-        style="background-image: url({isLoaded ? heroBg : 'transparent'});"
-    >
+    <section id="home" class="hero">
+        {#if isLoaded}
+            <!-- Dynamically load and display video background once in view -->
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src={heroBgVideo} type="video/webm" />
+            </video>
+        {/if}
+
         <div class="hero-content">
             <h1 id="udgam-title">UDGAM'2k24</h1>
-            <p id="rise-text"><span>RISE THROUGH THE CULTURE</span></p>
+            <p id="rise-text" style="font-family: 'Cinzel', serif;"><span>RISE THROUGH THE CULTURE</span></p>
             <div class="cta-buttons">
                 <a href="/register" class="cta-button primary">Register Now</a>
             </div>
@@ -49,4 +52,30 @@
     </section>
 </div>
 
+<style>
+    .hero {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--background-color); /* Fallback color */
+    }
 
+    .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        color: var(--text-color);
+    }
+</style>

@@ -2,7 +2,7 @@
     import { userLoginStore } from "../lib/userLoginStore";
     import { onMount } from 'svelte';
     import EventCard from '../components/EventCard.svelte'; // Adjust the path as necessary
-
+    import Schedule from "../components/Schedule.svelte";
     
     export let data;
 
@@ -26,6 +26,9 @@
     });
 
 </script>
+<svelte:head>
+  <title>UDGAM' 24</title>
+</svelte:head>
 
 <body>
     <main style="padding-top: 5rem;">
@@ -34,7 +37,7 @@
         {:else if Hero}
             <svelte:component this={Hero} />
         {/if}
-
+        <Schedule />
        
     </main>
 </body>
